@@ -59,11 +59,49 @@ public class Main {
 
 
     private static void numberCipherEncryptMenu() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Number cipher encrypt");
+        System.out.println("Indtast klartekst:");
+        String plaintext = scanner.nextLine();
+
+        int[] cipher = encryptNumberCipher(plaintext);
+
+        String ciphertext = getStringFromIntArray(cipher);
+        System.out.println("Kodeteksten er:");
+        System.out.println(ciphertext);
+    }
+
+    // hjælpemetode til at vise et int-array som en streng
+    private static String getStringFromIntArray(int[] cipher) {
+        return "";
+    }
+
+    // number cipher encryption: konverterer en tekst til array af tal
+    private static int[] encryptNumberCipher(String plaintext) {
+        return new int[0];
     }
 
     private static void numberCipherDecryptMenu() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Number Cipher decrypt");
+        System.out.println("Indtast kodetekst");
+        String ciphertext = scanner.nextLine();
+        int[] cipher = getIntArrayFromString(ciphertext);
+
+        String plaintext = decryptNumberCipher(cipher);
+
+        System.out.println("Klarteksten er:");
+        System.out.println(plaintext);
     }
 
+    private static String decryptNumberCipher(int[] cipher) {
+        return "";
+    }
+
+    // hjælpemetode til at "parse" en streng af tal til et array af int
+    private static int[] getIntArrayFromString(String ciphertext) {
+        return new int[0];
+    }
 
     // **************************
     // *
